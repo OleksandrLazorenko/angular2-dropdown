@@ -10,8 +10,15 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   border: 1px solid #cccccc;
+  border-radius: 5px;
   background: #e6e6e6;
   cursor: pointer;
+}
+
+.open .title {
+  box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.5);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .title:after {
@@ -24,16 +31,27 @@
   position: absolute;
   top: 12px;
   right: 10px;
+  transition: transform .5s ease;
+}
+
+.open .title:after {
+  transform: rotate(180deg);
 }
 
 .list {
-  max-height: 150px;
+  max-height: 0;
   overflow: auto;
+  list-style-type: none;
+  cursor: pointer;
+  transition: max-height .5s ease;
+  position: relative;
+}
+
+.open .list {
+  max-height: 150px;
   border-right: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   border-left: 1px solid #cccccc;
-  list-style-type: none;
-  cursor: pointer;
 }
 
 .list li {
@@ -51,4 +69,6 @@
   padding: 5px;
   text-align: right;
   cursor: pointer;
+  color: #333;
+  font-size: .75rem;
 }

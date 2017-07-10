@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
           return <DropdownOption> {
             id: movie.id,
             label: movie.original_title
-          }
+          };
         });
       });
   }
