@@ -1,0 +1,8 @@
+:host {
+  display: block;
+  padding: 30px;
+}
+
+dropdown {
+  max-width: 320px;
+}

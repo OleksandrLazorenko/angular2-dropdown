@@ -1,0 +1,10 @@
+<div class="dropdown" (clickOutside)="close()" [class.open]="isOpen">
+  <div class="title" (click)="toggle()">{{settings.title}} {{selected.label}}</div>
+  <ul [hidden]="!isOpen" class="list">
+    <li *ngFor="let option of options" [class.selected]="option.id == selected.id" (click)="selectOption(option)">
+      {{option.label}}
+    </li>
+  </ul>
+  <div [hidden]="!selected.id" class="clear" (click)="clearSelection()">Clear</div>
+</div>
+

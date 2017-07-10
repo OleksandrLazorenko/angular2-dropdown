@@ -1,0 +1,54 @@
+:host {
+  display: block;
+}
+
+.title {
+  padding: 5px 30px 5px 5px;
+  position: relative;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border: 1px solid #cccccc;
+  background: #e6e6e6;
+  cursor: pointer;
+}
+
+.title:after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #a6a6a6;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+}
+
+.list {
+  max-height: 150px;
+  overflow: auto;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  border-left: 1px solid #cccccc;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.list li {
+  text-transform: capitalize;
+  padding: 7px 5px;
+  background: #e6e6e6;
+  border-top: 1px solid #cccccc;
+}
+
+.list li:hover, .list li.selected {
+  background: #d9d9d9;
+}
+
+.clear {
+  padding: 5px;
+  text-align: right;
+  cursor: pointer;
+}
