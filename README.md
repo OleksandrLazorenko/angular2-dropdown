@@ -1,4 +1,4 @@
-# Angular 1.5 simple shop
+# Angular2 Dropdown
 
 ## Get Started
 **Clone:**
